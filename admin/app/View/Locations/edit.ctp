@@ -6,8 +6,8 @@
 		<div class="actions">
 		
 			<ul class="list-group">
-				<li class="list-group-item"><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Location.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Location.id'))); ?></li>
-				<li class="list-group-item"><?php echo $this->Html->link(__('List Locations'), array('action' => 'index')); ?></li>
+				<li class="list-group-item"><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $this->Form->value('Location.id')), null, __('Are you sure you want to delete # %s?', $this->Form->value('Location.id'))); ?></li>
+				<li class="list-group-item"><?php echo $this->Html->link(__('Listar Locais'), array('action' => 'index')); ?></li>
 			</ul><!-- /.list-group -->
 		
 		</div><!-- /.actions -->
@@ -16,7 +16,7 @@
 	
 	<div id="page-content" class="col-sm-9">
 
-		<h2><?php echo __('Edit Location'); ?></h2>
+		<h2><?php echo __('Editar Local'); ?></h2>
 
 		<div class="locations form">
 		

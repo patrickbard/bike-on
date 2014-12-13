@@ -1,4 +1,6 @@
-
+<?php
+    App::uses('CakeTime', 'Utility');
+?>
 <div id="page-container" class="row">
 
 	<div id="sidebar" class="col-sm-1">
@@ -6,7 +8,7 @@
 		<div class="actions">
 		
 			<ul class="list-group">
-				<li class="list-group-item"><?php echo $this->Html->link(__('New Accident'), array('action' => 'add'), array('class' => '')); ?></li>
+				<li class="list-group-item"><?php echo $this->Html->link(__('Novo Acidente'), array('action' => 'add'), array('class' => '')); ?></li>
 			</ul><!-- /.list-group -->
 			
 		</div><!-- /.actions -->
@@ -17,21 +19,21 @@
 
 		<div class="accidents index">
 		
-			<h2><?php echo __('Accidents'); ?></h2>
+			<h2><?php echo __('Acidentes'); ?></h2>
 			
 			<div class="table-responsive">
 				<table cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
 					<thead>
 						<tr>
 							<th><?php echo $this->Paginator->sort('id'); ?></th>
-							<th><?php echo $this->Paginator->sort('LOG1'); ?></th>
+							<th><?php echo $this->Paginator->sort('Logradouro'); ?></th>
 <!--							<th>--><?php //echo $this->Paginator->sort('LOG2'); ?><!--</th>-->
 <!--							<th>--><?php //echo $this->Paginator->sort('PREDIAL1'); ?><!--</th>-->
 <!--							<th>--><?php //echo $this->Paginator->sort('LOCAL'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('TIPO_ACID'); ?></th>
 <!--							<th>--><?php //echo $this->Paginator->sort('LOCAL_VIA'); ?><!--</th>-->
 <!--							<th>--><?php //echo $this->Paginator->sort('QUEDA_ARR'); ?><!--</th>-->
-							<th><?php echo $this->Paginator->sort('DATA_HORA'); ?></th>
+							<th><?php echo $this->Paginator->sort('DATA e HORA'); ?></th>
 							<th><?php echo $this->Paginator->sort('DIA_SEM'); ?></th>
 							<th><?php echo $this->Paginator->sort('FERIDOS'); ?></th>
 <!--							<th>--><?php //echo $this->Paginator->sort('FERIDOS_GR'); ?><!--</th>-->
@@ -65,7 +67,7 @@
 <!--							<th>--><?php //echo $this->Paginator->sort('CORREDOR'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('LONGITUDE'); ?></th>
 							<th><?php echo $this->Paginator->sort('LATITUDE'); ?></th>
-							<th class="actions"><?php echo __('Actions'); ?></th>
+                            <th class="actions"><?php echo __('Ações'); ?></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -79,7 +81,7 @@
 		<td><?php echo h($accident['Accident']['TIPO_ACID']); ?>&nbsp;</td>
 <!--		<td>--><?php //echo h($accident['Accident']['LOCAL_VIA']); ?><!--&nbsp;</td>-->
 <!--		<td>--><?php //echo h($accident['Accident']['QUEDA_ARR']); ?><!--&nbsp;</td>-->
-		<td><?php echo h($accident['Accident']['DATA_HORA']); ?>&nbsp;</td>
+		<td><?php echo h(CakeTime::format($accident['Accident']['DATA_HORA'], '%d/%m/%Y %H:%m')); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['DIA_SEM']); ?>&nbsp;</td>
 <!--		<td>--><?php //echo h($accident['Accident']['FERIDOS']); ?><!--&nbsp;</td>-->
 <!--		<td>--><?php //echo h($accident['Accident']['FERIDOS_GR']); ?><!--&nbsp;</td>-->
@@ -114,9 +116,10 @@
 		<td><?php echo h($accident['Accident']['LONGITUDE']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['LATITUDE']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $accident['Accident']['id']), array('class' => 'btn btn-default btn-xs')); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $accident['Accident']['id']), array('class' => 'btn btn-default btn-xs')); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $accident['Accident']['id']), array('class' => 'btn btn-default btn-xs'), __('Are you sure you want to delete # %s?', $accident['Accident']['id'])); ?>
+			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $accident['Accident']['id']), array('class' => 'btn btn-default btn-xs')); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $accident['Accident']['id']), array('class' => 'btn btn-warning btn-xs')); ?>
+			<?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $accident['Accident']['id']), array('class' => 'btn btn-danger btn-xs'),
+                                                                                        __('Certeza de que quer deletar # %s?', $accident['Accident']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -127,16 +130,16 @@
 			<p><small>
 				<?php
 					echo $this->Paginator->counter(array(
-					'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+                        'format' => __('Página {:page} de {:pages}, apresentando {:current} resultados de um total de {:count}. Começando em {:start}, terminando em {:end}')
 					));
 				?>
 			</small></p>
 
 			<ul class="pagination">
 				<?php
-					echo $this->Paginator->prev('< ' . __('Previous'), array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
+					echo $this->Paginator->prev('< ' . __('Anterior'), array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
 					echo $this->Paginator->numbers(array('separator' => '', 'currentTag' => 'a', 'tag' => 'li', 'currentClass' => 'disabled'));
-					echo $this->Paginator->next(__('Next') . ' >', array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
+					echo $this->Paginator->next(__('Próxima') . ' >', array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
 				?>
 			</ul><!-- /.pagination -->
 			

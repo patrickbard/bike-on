@@ -20,11 +20,14 @@
 			<li id="accidents">
                 <a href="http://bikeon.ia8.com.br/admin/accidents">Acidentes</a>
             </li>
-            <li id="locations">
-                <a href="http://bikeon.ia8.com.br/admin/locations">Locais Salvos</a>
-            </li>
             <li id="companies">
                 <a href="http://bikeon.ia8.com.br/admin/companies">Estabelicimentos</a>
+            </li>
+            <li id="parkings">
+                <a href="http://bikeon.ia8.com.br/admin/parkings">Estacionamentos</a>
+            </li>
+            <li id="locations">
+                <a href="http://bikeon.ia8.com.br/admin/locations">Locais Salvos</a>
             </li>
 		</ul><!-- /.nav navbar-nav -->
 	</div><!-- /.navbar-collapse -->

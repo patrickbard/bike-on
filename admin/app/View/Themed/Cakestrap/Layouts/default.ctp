@@ -21,6 +21,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <?php echo $this->Html->docType('html5'); ?> 
 <html>
 	<head>
+        <style>
+            html, body, #map-canvas {
+                height: 100%;
+                margin: 0px;
+                padding: 0px
+            }
+        </style>
 		<?php echo $this->Html->charset(); ?>
 		<title>
 			<?php echo $cakeDescription ?>:
@@ -38,7 +45,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			
 			echo $this->Html->script('libs/jquery-1.10.2.min');
 			echo $this->Html->script('libs/bootstrap.min');
-			
+            echo $this->Html->script('https://maps.googleapis.com/maps/api/js?v=3.exp');
+
 			echo $this->fetch('script');
 		?>
 	</head>

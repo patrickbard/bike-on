@@ -5,10 +5,10 @@
     <div class="actions">
 
         <ul class="list-group">
-            <li class="list-group-item"><?php echo $this->Html->link(__('Edit Accident'), array('action' => 'edit', $accident['Accident']['id']), array('class' => '')); ?> </li>
-            <li class="list-group-item"><?php echo $this->Form->postLink(__('Delete Accident'), array('action' => 'delete', $accident['Accident']['id']), array('class' => ''), __('Are you sure you want to delete # %s?', $accident['Accident']['id'])); ?> </li>
-            <li class="list-group-item"><?php echo $this->Html->link(__('List Accidents'), array('action' => 'index'), array('class' => '')); ?> </li>
-            <li class="list-group-item"><?php echo $this->Html->link(__('New Accident'), array('action' => 'add'), array('class' => '')); ?> </li>
+            <li class="list-group-item"><?php echo $this->Html->link(__('Edit Acidente'), array('action' => 'edit', $accident['Accident']['id']), array('class' => '')); ?> </li>
+            <li class="list-group-item"><?php echo $this->Form->postLink(__('Deletar Acidente'), array('action' => 'delete', $accident['Accident']['id']), array('class' => ''), __('Are you sure you want to delete # %s?', $accident['Accident']['id'])); ?> </li>
+            <li class="list-group-item"><?php echo $this->Html->link(__('Listar Acidente'), array('action' => 'index'), array('class' => '')); ?> </li>
+            <li class="list-group-item"><?php echo $this->Html->link(__('Novo Acidente'), array('action' => 'add'), array('class' => '')); ?> </li>
 
         </ul>
         <!-- /.list-group -->
@@ -23,7 +23,7 @@
 
 <div class="accidents view">
 
-<h2><?php echo __('Accident'); ?></h2>
+<h2><?php echo __('Acidente'); ?></h2>
 
 <div class="table-responsive">
 <table class="table table-striped table-bordered">

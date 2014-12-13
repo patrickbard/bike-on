@@ -6,7 +6,7 @@
 		<div class="actions">
 		
 			<ul class="list-group">
-				<li class="list-group-item"><?php echo $this->Html->link(__('Listar Locais'), array('action' => 'index')); ?></li>
+				<li class="list-group-item"><?php echo $this->Html->link(__('Listar Estacionamento'), array('action' => 'index')); ?></li>
 			</ul><!-- /.list-group -->
 		
 		</div><!-- /.actions -->
@@ -15,11 +15,11 @@
 	
 	<div id="page-content" class="col-sm-9">
 
-		<h2><?php echo __('Adicionar Local'); ?></h2>
+		<h2><?php echo __('Adicionar Estacionamento'); ?></h2>
 
-		<div class="locations form">
+		<div class="parkings form">
 		
-			<?php echo $this->Form->create('Location', array('role' => 'form')); ?>
+			<?php echo $this->Form->create('Parking', array('role' => 'form')); ?>
 
 				<fieldset>
 
@@ -30,7 +30,7 @@
 						<?php echo $this->Form->input('longitude', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 					<div class="form-group">
-						<?php echo $this->Form->input('user', array('class' => 'form-control')); ?>
+						<?php echo $this->Form->input('local', array('class' => 'form-control')); ?>
 					</div><!-- .form-group -->
 
 					<?php echo $this->Form->submit('Submit', array('class' => 'btn btn-large btn-primary')); ?>
