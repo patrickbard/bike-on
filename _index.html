@@ -59,20 +59,15 @@
     </header><!--//header-->
     
     <!-- ******PROMO****** -->
-    <section id="flutuante" class="blue-bg section offset-header">
+    <section id="promo" class="promo section offset-header">
         <div class="container text-center">
-            <form id="vai-para-onde" action="mapa.html" method="POST">
-                <input type="text" id="de-local" name="de-local" class="form-control" placeholder="Vai a onde?" />
-                <input type="text" id="from-local" name="from-local" class="form-control" placeholder="Vai a onde?" />
-                <input type="submit" class="form-control" id="btnEnviar" name="btnEnviar" value="Bike go" />
-                
+            <form action="mapa.html" method="get">
+                <input id="local" class="form-control" placeholder="Vai a onde?" />
             </form>
         </div><!--//container-->
+        
     </section><!--//promo-->
-    
-    <section id="mapa" class="promo section offset-header">
-    </section>  
-    <div id="trajeto-texto"></div>
+      
     <!-- ******FOOTER****** --> 
     <footer class="footer">
         <div class="container text-center">
@@ -88,9 +83,7 @@
     <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>   
-
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>       
     
 </body>
 </html> 
