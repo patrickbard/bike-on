@@ -1,7 +1,7 @@
 
 <div id="page-container" class="row">
 
-	<div id="sidebar" class="col-sm-3">
+	<div id="sidebar" class="col-sm-1">
 		
 		<div class="actions">
 		
@@ -13,7 +13,7 @@
 		
 	</div><!-- /#sidebar .col-sm-3 -->
 	
-	<div id="page-content" class="col-sm-9">
+	<div id="page-content" class="col-sm-11">
 
 		<div class="accidents index">
 		
@@ -73,18 +73,18 @@
 	<tr>
 		<td><?php echo h($accident['Accident']['id']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['LOG1']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['LOG2']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['PREDIAL1']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['LOCAL']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['LOG2']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['PREDIAL1']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['LOCAL']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['TIPO_ACID']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['LOCAL_VIA']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['QUEDA_ARR']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['LOCAL_VIA']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['QUEDA_ARR']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['DATA_HORA']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['DIA_SEM']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['FERIDOS']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['FERIDOS_GR']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['MORTES']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['MORTE_POST']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['FERIDOS']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['FERIDOS_GR']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['MORTES']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['MORTE_POST']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['FATAIS']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['AUTO']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['TAXI']); ?>&nbsp;</td>
@@ -92,25 +92,25 @@
 		<td><?php echo h($accident['Accident']['ONIBUS_URB']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['ONIBUS_MET']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['ONIBUS_INT']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['CAMINHAO']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['CAMINHAO']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['MOTO']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['CARROCA']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['BICICLETA']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['OUTRO']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['CARROCA']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['BICICLETA']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['OUTRO']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['TEMPO']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['NOITE_DIA']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['NOITE_DIA']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['FONTE']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['BOLETIM']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['REGIAO']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['DIA']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['MES']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['ANO']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['FX_HORA']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['BOLETIM']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['REGIAO']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['DIA']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['MES']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['ANO']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['FX_HORA']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['CONT_ACID']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['CONT_VIT']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['UPS']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['CONSORCIO']); ?>&nbsp;</td>
-		<td><?php echo h($accident['Accident']['CORREDOR']); ?>&nbsp;</td>
+<!--		<td>--><?php //echo h($accident['Accident']['CONSORCIO']); ?><!--&nbsp;</td>-->
+<!--		<td>--><?php //echo h($accident['Accident']['CORREDOR']); ?><!--&nbsp;</td>-->
 		<td><?php echo h($accident['Accident']['LONGITUDE']); ?>&nbsp;</td>
 		<td><?php echo h($accident['Accident']['LATITUDE']); ?>&nbsp;</td>
 		<td class="actions">
