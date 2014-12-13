@@ -25,44 +25,44 @@
 						<tr>
 							<th><?php echo $this->Paginator->sort('id'); ?></th>
 							<th><?php echo $this->Paginator->sort('LOG1'); ?></th>
-							<th><?php echo $this->Paginator->sort('LOG2'); ?></th>
-							<th><?php echo $this->Paginator->sort('PREDIAL1'); ?></th>
-							<th><?php echo $this->Paginator->sort('LOCAL'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('LOG2'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('PREDIAL1'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('LOCAL'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('TIPO_ACID'); ?></th>
-							<th><?php echo $this->Paginator->sort('LOCAL_VIA'); ?></th>
-							<th><?php echo $this->Paginator->sort('QUEDA_ARR'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('LOCAL_VIA'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('QUEDA_ARR'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('DATA_HORA'); ?></th>
 							<th><?php echo $this->Paginator->sort('DIA_SEM'); ?></th>
 							<th><?php echo $this->Paginator->sort('FERIDOS'); ?></th>
-							<th><?php echo $this->Paginator->sort('FERIDOS_GR'); ?></th>
-							<th><?php echo $this->Paginator->sort('MORTES'); ?></th>
-							<th><?php echo $this->Paginator->sort('MORTE_POST'); ?></th>
-							<th><?php echo $this->Paginator->sort('FATAIS'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('FERIDOS_GR'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('MORTES'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('MORTE_POST'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('FATAIS'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('AUTO'); ?></th>
 							<th><?php echo $this->Paginator->sort('TAXI'); ?></th>
 							<th><?php echo $this->Paginator->sort('LOTACAO'); ?></th>
 							<th><?php echo $this->Paginator->sort('ONIBUS_URB'); ?></th>
 							<th><?php echo $this->Paginator->sort('ONIBUS_MET'); ?></th>
 							<th><?php echo $this->Paginator->sort('ONIBUS_INT'); ?></th>
-							<th><?php echo $this->Paginator->sort('CAMINHAO'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('CAMINHAO'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('MOTO'); ?></th>
-							<th><?php echo $this->Paginator->sort('CARROCA'); ?></th>
-							<th><?php echo $this->Paginator->sort('BICICLETA'); ?></th>
-							<th><?php echo $this->Paginator->sort('OUTRO'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('CARROCA'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('BICICLETA'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('OUTRO'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('TEMPO'); ?></th>
-							<th><?php echo $this->Paginator->sort('NOITE_DIA'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('NOITE_DIA'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('FONTE'); ?></th>
-							<th><?php echo $this->Paginator->sort('BOLETIM'); ?></th>
-							<th><?php echo $this->Paginator->sort('REGIAO'); ?></th>
-							<th><?php echo $this->Paginator->sort('DIA'); ?></th>
-							<th><?php echo $this->Paginator->sort('MES'); ?></th>
-							<th><?php echo $this->Paginator->sort('ANO'); ?></th>
-							<th><?php echo $this->Paginator->sort('FX_HORA'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('BOLETIM'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('REGIAO'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('DIA'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('MES'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('ANO'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('FX_HORA'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('CONT_ACID'); ?></th>
 							<th><?php echo $this->Paginator->sort('CONT_VIT'); ?></th>
 							<th><?php echo $this->Paginator->sort('UPS'); ?></th>
-							<th><?php echo $this->Paginator->sort('CONSORCIO'); ?></th>
-							<th><?php echo $this->Paginator->sort('CORREDOR'); ?></th>
+<!--							<th>--><?php //echo $this->Paginator->sort('CONSORCIO'); ?><!--</th>-->
+<!--							<th>--><?php //echo $this->Paginator->sort('CORREDOR'); ?><!--</th>-->
 							<th><?php echo $this->Paginator->sort('LONGITUDE'); ?></th>
 							<th><?php echo $this->Paginator->sort('LATITUDE'); ?></th>
 							<th class="actions"><?php echo __('Actions'); ?></th>

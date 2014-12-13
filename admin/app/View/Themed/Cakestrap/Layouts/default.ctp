@@ -45,18 +45,18 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 	<body>
 
-		<div id="main-container">
+		<div id="main-container" class="col-lg-12">
 		
-			<div id="header" class="container">
+			<div id="header" class="container-fluid">
 				<?php echo $this->element('menu/top_menu'); ?>
 			</div><!-- /#header .container -->
 			
-			<div id="content" class="container">
+			<div id="content" class="container-fluid">
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
 			</div><!-- /#content .container -->
 			
-			<div id="footer" class="container">
+			<div id="footer" class="container-fluid">
 				<?php //Silence is golden ?>
 			</div><!-- /#footer .container -->
 			
