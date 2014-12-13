@@ -85,7 +85,7 @@ a.btn-cta-secondary:hover,
   color: #074f66;
 }
 .offset-header {
-  padding-top: 90px;
+  /*padding-top: 90px;*/
 }
 pre code {
   font-size: 16px;
@@ -95,7 +95,7 @@ pre code {
   padding: 10px 0;
   background: #17baef;
   color: #fff;
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
 }
 .header.navbar-fixed-top {
