@@ -6,7 +6,7 @@
 		<div class="actions">
 		
 			<ul class="list-group">
-				<li class="list-group-item"><?php echo $this->Html->link(__('List Companies'), array('action' => 'index')); ?></li>
+				<li class="list-group-item"><?php echo $this->Html->link(__('Listar Estabelecimentos'), array('action' => 'index')); ?></li>
 			</ul><!-- /.list-group -->
 		
 		</div><!-- /.actions -->
@@ -15,7 +15,7 @@
 	
 	<div id="page-content" class="col-sm-9">
 
-		<h2><?php echo __('Add Company'); ?></h2>
+		<h2><?php echo __('Adicionar Estabelecimento'); ?></h2>
 
 		<div class="companies form">
 		
