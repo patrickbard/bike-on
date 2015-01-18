@@ -109,6 +109,11 @@ jQuery(document).ready(function($) {
             });
     }
 
+    if(document.cookie.indexOf("email_enviado") >= 0)
+    {
+        $('#aviso').fadeOut();
+    }
+
     var map;
     var directionsDisplay;
     var directionsService = new google.maps.DirectionsService();
@@ -229,7 +234,7 @@ jQuery(document).ready(function($) {
                 alert(err.Message);
             }
           });
-
+          document.cookie = "email_enviado=1";
           $('#aviso').fadeOut();
     })
 
