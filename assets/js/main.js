@@ -2,9 +2,9 @@ jQuery(document).ready(function($) {
 
     /* ======= Scrollspy ======= */
     $('body').scrollspy({ target: '#header', offset: 400});
-    
+
     /* ======= Fixed header when scrolled ======= */
-    
+
     // $(window).bind('scroll', function() {
     //      if ($(window).scrollTop() > 50) {
     //          $('#header').addClass('navbar-fixed-top');
@@ -13,27 +13,27 @@ jQuery(document).ready(function($) {
     //          $('#header').removeClass('navbar-fixed-top');
     //      }
     // });
-   
+
     /* ======= ScrollTo ======= */
     $('a.scrollto').on('click', function(e){
-        
+
         //store hash
         var target = this.hash;
-                
+
         e.preventDefault();
-        
+
 		$('body').scrollTo(target, 800, {offset: -70, 'axis':'y', easing:'easeOutQuad'});
         //Collapse mobile menu after clicking
 		if ($('.navbar-collapse').hasClass('in')){
 			$('.navbar-collapse').removeClass('in').addClass('collapse');
 		}
-		
+
 	});
 
     var listaAcidentes;
 
     getListAcidentes = function(latitude, longitude)
-    {        
+    {
         $.get( "data.json", function( data ) {
               listaAcidentes = data.result.records;
         });
@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
     setMarker = function(map, nome,lat, lon)
     {
         var myLatlng = new google.maps.LatLng(lat,lon);
-        
+
         var marker = new google.maps.Marker({
                             position: myLatlng,
                             map: map,
@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
                 resource_id: 'b64586af-cd7c-47c3-9b92-7b99875e1c08',
                 limit: 100,
             };
-             
+
             $.ajax({
                 url: 'http://datapoa.com.br/api/action/datastore_search',
                 data: data,
@@ -67,7 +67,7 @@ jQuery(document).ready(function($) {
                 async: false,
                 success: function(data) {
                     data.result.records.forEach(function (value, index, ar) {
-                        
+
                         var myLatlng = new google.maps.LatLng(value.LATITUDE, value.LONGITUDE);
 
                         var image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gwNCAoKx1OyDwAAA5VJREFUSMfdlU9oXUUUxn9nZu59eYmEvD6TRdBFAyIqAYvFqguRSMFaC+JCtFQD7gougiAiCrYS8E/WiiASjApSBWsXUtQ2mI2bKtjaqCgYoUlsmiYhYM29d2aOi/vy8ue9LITiwoHDnXtn7nfm+843M/BfteXRnuuGtTRaa/bdekcwnVdf7ZnwUYaiGFVAUJCdYNYHFFQARQBH/HLXy8tPbp/F4iu1RwrklDorNhWsE4yVnfE1lOBYgkIsFF9ExEcq6NCuY8uTWxgUXpKYGpJEqFQNLhXEmLYMzMCjuL0vQqVOnJ2kOHMUn2VwDXyAogg3NOeud2IAQXCpwaUG6wzWgJVtYSyV+45ju/uxlQrJwAHSwWES40kSAwihEG2pgQbFqGAoQ+IO4hiBjvrWT7XbEFWMCKIQg9KGgSkljQJB0EhrhIiaLnTu2y0J/IVxkEpZbBV00+KaDIhAaDxje9OYvrtwB94jTn+E/vIZ0jdI/Olj9Mo0RIOEuIGxnQFRN8BDg8l6BEXSOu7hcaSzF7t3BOkZwJ95gTh/HkLJmtgw1qYEG/tAQaOgoYymxxGk0kNyeBKp1vDn3kKXZ0j2j6FLM/jzE2AcGmj+q+0SNKkFwAfsHY+DTRCTEldmkGqN8PNJ/NnjoIpevoj078EOHgEM4cInELIWid1mm9oAFAXJkU/xX4zAXwsQA+6hMbLx/ejVX0GqkHbiHjhGfuIw+DVIOnEPvkb2+fNoDKXcLTVoaOf2DFOcGkFXF1A1qCT4b8awtx5Cs7/RCG7fs2QfPIbmOaoWzdfw301gbr4XirBFItPiIgRdnodoyvcAujKPuWkf5AGCQVcvg48NAwBBiAu/YXffD96XBW/ZaFGIUVDXheYF2HS9xkhaIy7NoNGWgJ11NMuhsmlOdz9+frpk1E4iaazW/3ia5OAomCoUOZgK7s4nKL56E2wHBCXOTuPufgbUQlEgaTf29oP4708CCai2cVGj0P7PP8jOvkPH0HOY3lvQlUsUU2+jq0vN9YSLp5H6btJDbyBddcKlH8im3iUUoF7ZfAY3E1gVQoA8V1hcxJ94CdGAGIskVRDZuq1nfyd//ygaFTWOQEKWRWJQXBTTkiCBa1oEQrRkPuBdgpCWx3UedrgUKiXzqMQYCEGxPpKIzLUk6HB8rbm+7mO4x3shrP37q9KpqhOd6vtw8dzC0730TVzZGFx46sbrdifPDffy/2n/AP6rwqeycewfAAAAAElFTkSuQmCC';
@@ -86,6 +86,29 @@ jQuery(document).ready(function($) {
             });
     }
 
+    setEstacionamentos = function()
+    {
+        $.get( "estacionamentos.json", function( data ) {
+
+                data.forEach(function (value, index, ar) {
+
+                        var myLatlng = new google.maps.LatLng(value.latitude, value.longitude);
+
+                        var image = 'estacionamento.gif';
+
+                        var marker = new google.maps.Marker({
+                                            position: myLatlng,
+                                            map: map,
+                                            title: value.local,
+                                            icon:image
+                                        });
+
+                        marker.setMap(map);
+
+                    });
+            });
+    }
+
     var map;
     var directionsDisplay;
     var directionsService = new google.maps.DirectionsService();
@@ -93,7 +116,7 @@ jQuery(document).ready(function($) {
     initialize = function(){
         var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
         directionsDisplay = new google.maps.DirectionsRenderer();
-        
+
         var options = {
             zoom: 12,
             center: latlng,
@@ -105,7 +128,9 @@ jQuery(document).ready(function($) {
         getBikePoa();
 
         getListAcidentes();
-        
+
+        setEstacionamentos();
+
         directionsDisplay.setMap(map);
         directionsDisplay.setPanel(document.getElementById("trajeto-texto"));
 
@@ -114,9 +139,9 @@ jQuery(document).ready(function($) {
 
                 pontoPadrao = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
                 map.setCenter(pontoPadrao);
-                
+
                 var geocoder = new google.maps.Geocoder();
-                
+
                 geocoder.geocode({
                     "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
                 },
@@ -127,34 +152,34 @@ jQuery(document).ready(function($) {
                 });
             });
         }
-        
+
     }
 
     initialize();
 
     $("#vai-para-onde").submit(function(event) {
         event.preventDefault();
-        
+
         var enderecoPartida = $("#de-local").val() + ", Porto Alegre, RS";
         var enderecoChegada = $("#from-local").val() + ", Porto Alegre, RS";
-        
+
         var request = {
             origin: enderecoPartida,
             destination: enderecoChegada,
             travelMode: google.maps.TravelMode.WALKING
         };
-        
+
         directionsService.route(request, function(result, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 directionsDisplay.setDirections(result);
 
                 var lat_long = directionsDisplay.directions.routes[0].overview_path;
-                
+
                 for (var i = lat_long.length - 1; i >= 0; i--) {
 
                     for (var ii = listaAcidentes.length - 1; ii >= 0; ii--) {
 
-                            if(listaAcidentes[ii].LONGITUDE  == lat_long[i].D || 
+                            if(listaAcidentes[ii].LONGITUDE  == lat_long[i].D ||
                                listaAcidentes[ii].LATITUDE   == lat_long[i].k)
                             {
                                 var myLatlng = new google.maps.LatLng(listaAcidentes[ii].LATITUDE, listaAcidentes[ii].LONGITUDE);
@@ -169,12 +194,43 @@ jQuery(document).ready(function($) {
                                                 });
 
                                 marker.setMap(map);
-                            }      
-                    };    
+                            }
+                    };
                 };
                 //analisaRotas();
             }
         });
     });
+
+    $("#ser-informado").submit(function(event){
+          var aviso = $('#aviso');
+          var data  = $(this).serialize();
+
+          event.preventDefault();
+
+          $.ajax({
+            type: 'POST',
+            cache: false,
+            url:   'http://primous.com.br/webservice/bikeon/send_email',
+            data:  data,
+            success: function(result) {
+
+                if(result == '0')
+                {
+                    $('#mensagem').html('Não foi possível realizar sua solicitação. Por favor, tente mais tarde.');
+                }
+                else
+                {
+                    $('#aviso').fadeOut();
+                }
+            },
+            error: function(xhr, status, error) {
+                var err = eval("(" + xhr.responseText + ")");
+                alert(err.Message);
+            }
+          });
+
+          $('#aviso').fadeOut();
+    })
 
 });

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -19,35 +19,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <!-- Plugins CSS -->    
+    <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/plugins/prism/prism.css">
-    <!-- Theme CSS -->  
+    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="assets/js/components/sweetalert/lib/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/js/components/sweetalert/lib/sweet-alert.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head> 
+</head>
 
 <body data-spy="scroll" ng-app>
 
-    <!-- ******HEADER****** --> 
-    <header id="header" class="header">  
-        <div class="container">            
+    <!-- ******HEADER****** -->
+    <header id="header" class="header">
+        <div class="container">
             <h1 class="logo pull-left">
                 <a class="scrollto" href="#promo">
                     <img src="logo.png" style="width:200px" />
                 </a>
             </h1><!--//logo-->
-
+            <div id="aviso" class="pull-left" style="margin: 20px 9%;">
+              <strong>Este aplicativo é apenas um Beta desenvolvido durante o Hackaton POA.</strong>
+              <p>Estamos trabalhando para lançar o app oficial.</p>
+              <form id="ser-informado" action="serinformado.php" method="POST">
+                <li id="mensagem" hidden><li>
+                <input type="email" id="ser-informado" name="email" class="form-control" placeholder="Deixe seu email para receber em primeira mão a versão final!" />
+                <input type="submit" class="form-control" id="btnEnviar" name="btnEnviar" value="Me informe" />
+              </form>
+            </div>
             <nav id="main-nav" class="main-nav navbar-right" role="navigation">
                 <div class="navbar-header">
                     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -56,52 +67,60 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
-                </div><!--//navbar-header-->            
+                </div><!--//navbar-header-->
                 <div class="navbar-collapse collapse" id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Bike Go!</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#about">Colaborar</a></li>
-                        <li class="nav-item"><a class="scrollto" href="#license">Sobre</a></li>
+                        <li class="active nav-item sr-only"><a class="scrollto" href="#">Bike Go!</a></li>
+                        <li class="nav-item"><a id="colaborar" class="scrollto" href="#">Colaborar</a></li>
+                        <li class="nav-item"><a id="sobre" class="scrollto" href="#">Sobre</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
         </div>
     </header><!--//header-->
-    
+
     <!-- ******PROMO****** -->
     <section id="flutuante" class="blue-bg section offset-header">
         <div class="container text-center">
             <form id="vai-para-onde" action="index.html" method="POST">
-                <input type="text" id="de-local" name="de-local" class="form-control" placeholder="Vai a onde?" />
+                <input type="text" id="de-local" name="de-local" class="form-control" placeholder="Ta onde?" />
                 <input type="text" id="from-local" name="from-local" class="form-control" placeholder="Vai a onde?" />
                 <input type="submit" class="form-control" id="btnEnviar" name="btnEnviar" value="Bike go" />
-                
+
             </form>
         </div><!--//container-->
     </section><!--//promo-->
-    
+
     <section id="mapa" class="promo section offset-header">
-    </section>  
-    <div id="trajeto-texto"></div>
-    <!-- ******FOOTER****** --> 
+    </section>
+    <!-- <div id="trajeto-texto"></div> -->
+    <!-- ******FOOTER****** -->
     <footer class="footer">
         <div class="container text-center">
             <small class="copyright">BikeOn <i class="fa fa-heart"></i></small>
         </div><!--//container-->
     </footer><!--//footer-->
-     
-    <!-- Javascript -->          
+
+    <!-- Javascript -->
     <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>    
-    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>   
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>     
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
-    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>   
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
 
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>    
-    
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script>
+        $('#colaborar').click(function(){
+          swal("Colaborar", "Para colaborar com esta plataforma informe bugs, idéias e sugestões para bikeon@primous.com.br.")
+        })
+        $('#sobre').click(function(){
+          swal("Sobre", "Este é um app de mobilidade urbana colaborativo. Com a intenção de ajudar is ciclistas com informações sobre rotas, trânsito e demais informações relevantes.")
+        })
+    </script>
+
 </body>
-</html> 
-
+</html>

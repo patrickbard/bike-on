@@ -1,0 +1,32 @@
+{
+  "name": "bike-on",
+  "version": "0.0.1",
+  "homepage": "bikeon.cc",
+  "authors": [
+    "Cristian Oliveira da Rosa <contato@cristianoliveira.com.br>"
+  ],
+  "description": "Urban mobility app",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Mobility",
+    "bike",
+    "city",
+    "urban"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "sweetalert": "~0.3.3"
+  },
+  "directory" : "assets/js"
+
+}
